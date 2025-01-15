@@ -1,0 +1,137 @@
+/* Carrousel plein écran */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 200px);
+    /* Ajustez 60px à la hauteur de la navbar */
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.slide-caption h1 {
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.4rem;
+    word-wrap: initial;
+    font-weight: 500;
+}
+
+.slide-caption p {
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.slide-caption h3 {
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    /* background: rgba(0, 0, 0, 0.5); */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 100;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.btn-discover {
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    padding: 0.7rem;
+    background: #3d3b3b;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Conteneur des indicateurs */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 15px;
+    /* Positionné au bas du carrousel */
+    left: 0;
+    right: 0;
+    gap: 10px;
+    z-index: 10;
+}
+
+/* Style des indicateurs */
+.carousel-indicators .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    /* Couleur par défaut */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .indicator:hover,
+.carousel-indicators .indicator.active {
+    background-color: #333;
+    /* Couleur active */
+}

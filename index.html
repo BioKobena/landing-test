@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milliard Store</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./caroussel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-left">
+          <div class="logo">
+            <img class="logo-image" src="./logo/logo2.jpg" alt="Milliard Store">
+          </div>
+
+          <nav class="navbar">
+            <ul>
+              <li><a href="#">Accueil</a></li>
+              <li><a href="#">Montres</a></li>
+              <li><a href="#">Bijoux & Accessoires</a></li>
+              <li><a href="#">À propos</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Icônes utilisateur (masquées sur mobile) -->
+        <div class="user-options">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-bag-shopping"></i>
+          <i class="fa-regular fa-user"></i>
+        </div>
+
+        <!-- Responsive Menu Hamburger -->
+        <div class="hamburger-menu">
+          <span class="hamburger-icon" onclick="toggleMenu()">&#9776;</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Responsive menu hamburger -->
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"
+            onclick="toggleMenu()">&#10005;</span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body">
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Montres</a></li>
+          <li><a href="#">Bijoux & Accessoires</a></li>
+          <li><a href="#">À propos</a></li>
+
+          <!-- Icônes utilisateur dans le menu hamburger -->
+          <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
+          <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="hero carousel">
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <img src="./image/Banner.jpg" alt="Image 1">
+          <div class="slide-caption">
+            <h3>ÉLÉGANCE & PRÉCISION</h3>
+            <h1>Montres sophistiquées pour chaque instant.</h1>
+            <p>Automne Hiver 2024</p>
+            <a href="#" class="btn-discover">Découvrir &nbsp;<i
+                class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="./image/Collection BIJOUX ACCESSOIRES.jpg" alt="Image 2">
+          <div class="slide-caption">
+            <h3>ÉLÉGANCE & PRÉCISION</h3>
+            <h1>Montres sophistiquées pour chaque instant.</h1>
+            <p>Automne Hiver 2024</p>
+            <a href="#" class="btn-discover">Découvrir &nbsp;<i
+                class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="./image/Montres pour hommes.jpg" alt="Image 3">
+          <div class="slide-caption">
+            <h3>ÉLÉGANCE & PRÉCISION</h3>
+            <h1>Montres sophistiquées pour chaque instant.</h1>
+            <p>Automne Hiver 2024</p>
+            <a href="#" class="btn-discover">Découvrir &nbsp;<i
+                class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn prev"><i
+          class="fa-solid fa-chevron-left"></i></button>
+      <button class="carousel-btn next"><i
+          class="fa-solid fa-chevron-right"></i></button>
+
+      <!-- Boutons indicateurs -->
+      <div class="carousel-indicators">
+        <button class="indicator" data-slide="0"></button>
+        <button class="indicator" data-slide="1"></button>
+        <button class="indicator" data-slide="2"></button>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Section: Description -->
+      <section class="description">
+        <div class="section-block">
+          <h1>Votre grossiste de montres en ligne</h1>
+          <p>
+            Sur milliardstore.com, explorez plus de 30 000 montres et
+            accessoires
+            pour célébrer vos moments les plus précieux : fiançailles, mariage,
+            naissance ou baptême.
+            Trouvez la montre parfaite, ainsi que des bagues, bracelets,
+            colliers et pendentifs.
+          </p>
+        </div>
+      </section>
+
+      <!-- Gallerie -->
+      <div class="grid-container">
+        <!-- Ligne du haut -->
+        <div class="stack left">
+          <img src="./image/Montres pour femmes.jpg" alt="Image 1">
+          <img src="./image/Montres pour enfants.jpg" alt="Image 2">
+        </div>
+        <div class="center">
+          <img src="./image/Montres pour hommes.jpg" alt="Image 3">
+        </div>
+        <div class="stack right">
+          <img src="./image/Montres connectées.jpg" alt="Image 4">
+          <img src="./image/Montres spéciales.jpg" alt="Image 5">
+        </div>
+      </div>
+
+      <!-- Grille séparée pour images 6 et 7 -->
+      <div class="grid-container-bottom">
+        <div class="bottom">
+          <img src="./image/collection MONTRES.jpg" alt="Image 6">
+          <div class="overlay">
+            <h6>Collection</h6>
+            <h2>MONTRES</h2>
+            <button>JE DÉCOUVRE &nbsp; <i
+                class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+        <div class="bottom">
+          <img src="./image/Collection BIJOUX ACCESSOIRES.jpg" alt="Image 7">
+          <div class="overlay">
+            <h6>Collection</h6>
+            <h2>BIJOUX ACCESSOIRES</h2>
+            <button>JE DÉCOUVRE &nbsp; <i
+                class="fa-solid fa-arrow-right"></i> </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rassurance -->
+      <div class="service">
+        <div class="service-item">
+          <div class="icon">
+            <img src="./image/Livraison Rapide.svg" alt="Livraison rapide">
+          </div>
+          <h3 class="title">Livraison rapide</h3>
+          <p class="text">Recevez vos commandes rapidement grâce à notre service
+            de livraison express, partout en France.</p>
+        </div>
+        <div class="service-item">
+          <div class="icon">
+            <img src="./image/Paiement securise.svg" alt="Paiement sécurisé">
+          </div>
+          <h3 class="title">Paiement sécurisé</h3>
+          <p class="text">Achetez en toute confiance avec notre système de
+            paiement sécursé.</p>
+        </div>
+        <div class="service-item">
+          <div class="icon">
+            <img src="./image/Meilleure qualité.svg" alt="Meilleure qualité">
+          </div>
+          <h3 class="title">Meilleure qualité</h3>
+          <p class="text">Profitez de la qualité exceptionnelle de nos produits
+            sélectionnés avec soin.</p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="newsletter-container">
+        <div class="newsletter">
+          <span>NEWSLETTER :</span>
+          <input type="email" placeholder="Entrez votre email">
+          <button>REJOIGNEZ-NOUS</button>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <img src="./logo/logo1.png" alt="Milliard Store Logo"
+              class="footer-logo">
+            <p>Découvrez l'élégance intemporelle de Milliardstore et
+              laissez-vous séduire par notre collection exclusive de
+              montres.</p>
+          </div>
+          <div class="footer-section">
+            <h4>NOS PRODUITS</h4>
+            <ul>
+              <li>Montres pour femmes</li>
+              <li>Montres pour hommes</li>
+              <li>Montres pour enfants</li>
+              <li>Montres mécaniques</li>
+              <li>Montres spéciales</li>
+              <li>Montres connectées</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>INFORMATIONS</h4>
+            <ul>
+              <li>A propos de nous</li>
+              <li>FAQ</li>
+              <li>Contactez nous</li>
+              <li>CGV</li>
+              <li>Politique de Confidentialité</li>
+              <li>Politique de Cookies</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>CONTACT</h4>
+            <p>Adresse : 204 Rue de la Haie Coq, 93300 Aubervilliers France</p>
+            <p>Téléphone : +33 01 61 51</p>
+            <p>Horaires : Toute la semaine de 9h00 à 19h00, sauf le dimanche</p>
+            <p>E-MAIL : service.easystore@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>Milliardstore.com © 2025. All Rights Reserved</p>
+          <div class="payment-methods">
+            <img class="img-footer-bottom"
+              src="https://logo-marque.com/wp-content/uploads/2020/06/Visa-Logo.png"
+              alt="Visa">
+            <img class="img-footer-bottom"
+              src="https://data.cbonds.com/organisations_logos/24325/1609314895logo-mastercard-mobile.png"
+              alt="Mastercard">
+          </div>
+        </div>
+      </footer>
+
+      <script src="main.js"></script>
+    </body>
+  </html>

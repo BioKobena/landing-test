@@ -242,6 +242,7 @@ body {
   grid-template-rows: auto;
   /* Ligne unique */
   gap: 10px;
+  
   /* Espacement entre les éléments */
   padding: 1rem;
 }
@@ -287,7 +288,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  padding: 10px;
+  padding: 9px;
   border-radius: 5px;
   font-size: 18px;
   font-weight: bold;
@@ -352,7 +353,7 @@ body {
   margin: 5px 0;
 }
 
-.overlay h2 {
+.overlay h3 {
   font-size: 24px;
   margin: 10px 0;
 }
@@ -578,6 +579,8 @@ body {
   /* Pour que l'image remplisse le conteneur sans déformation */
 }
 
+
+
 .texte {
   position: absolute;
   top: 10px;
@@ -694,6 +697,9 @@ body {
     margin: 10px 0;
   }
 
+  .contact{
+    margin-bottom: 5rem;
+  }
   .footer-bottom {
     flex-direction: column;
     gap: 10px;
@@ -791,5 +797,77 @@ body {
 
   .payment-methods img {
     height: 25px;
+  }
+}
+
+/* Pour les écrans plus petits que 820px */
+@media (max-width: 820px) {
+  /* Cacher la navbar principale */
+  .navbar {
+    display: none;
+  }
+
+  /* Icône du menu hamburger */
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001; /* Toujours visible au-dessus des autres éléments */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+  }
+
+  /* Menu mobile */
+  .site-mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Assure que le menu prend toute la largeur de la fenêtre */
+    height: 100vh; /* Assure que le menu prend toute la hauteur de la fenêtre */
+    background: rgba(0, 0, 0, 0.9); /* Fond sombre */
+    display: none; /* Cacher le menu par défaut */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    overflow: hidden; /* Empêche les débordements dans le menu */
+  }
+
+  .site-mobile-menu.open {
+    display: flex; /* Affiche le menu en mode flex */
+  }
+
+  /* Liens dans le menu */
+  .site-mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .site-mobile-menu ul li {
+    margin: 20px 0;
+  }
+
+  .site-mobile-menu ul li a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Supprime les marges ou padding autour du HTML et du body */
+  html, body {
+    height: 100%;
+    width: 100%;
   }
 }

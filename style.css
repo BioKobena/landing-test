@@ -20,6 +20,7 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
 /* Header */
 .header {
   background: #fff;
@@ -88,7 +89,8 @@ body {
 }
 
 .site-mobile-menu {
-  display: none; /* Menu fermé par défaut */
+  display: none;
+  /* Menu fermé par défaut */
   position: fixed;
   top: 0;
   left: 0;
@@ -100,7 +102,8 @@ body {
 }
 
 .site-mobile-menu.open {
-  display: block; /* Menu ouvert */
+  display: block;
+  /* Menu ouvert */
 }
 
 .site-mobile-menu-header {
@@ -154,9 +157,13 @@ body {
 
   /* Afficher les icônes utilisateur dans le menu mobile */
   .site-mobile-menu-body ul li a i {
-    margin-right: 10px; /* Espacement entre l'icône et le texte */
-    font-size: 20px; /* Taille des icônes */
+    margin-right: 10px;
+    /* Espacement entre l'icône et le texte */
+    font-size: 20px;
+    /* Taille des icônes */
   }
+
+
 }
 
 
@@ -186,7 +193,7 @@ body {
 }
 
 
-.description .section-block h1{
+.description .section-block h1 {
   font-family: 'Times New Roman', Times, serif;
   text-transform: uppercase;
 }
@@ -319,6 +326,7 @@ body {
 }
 
 
+
 /* Grille pour images 6 et 7 */
 .grid-container-bottom {
   display: grid;
@@ -366,11 +374,31 @@ body {
   .grid-container {
     grid-template-columns: 1fr;
     /* Une seule colonne pour les images du haut */
+    gap: 2rem;
   }
 
   .grid-container-bottom {
     grid-template-columns: 1fr;
     /* Une seule colonne pour les images du bas */
+  }
+
+  .stack.left,
+  .stack.right,
+  .center {
+    grid-column: 1 / -1;
+    /* Chaque section prend toute la largeur */
+  }
+
+  .stack.left img,
+  .stack.right img,
+  .center img {
+    object-fit: cover;
+    height: auto;
+  }
+
+  .grid-container-bottom .image-text {
+    height: auto;
+    /* Permet de conserver l'alignement vertical des images */
   }
 }
 
@@ -472,6 +500,10 @@ body {
   margin: 0 10px;
 }
 
+.footer-section p {
+  letter-spacing: 0.1rem;
+}
+
 .footer-section h3 {
   margin-bottom: 10px;
 }
@@ -535,6 +567,31 @@ body {
   border-radius: 0.15rem;
 }
 
+.image-text {
+  position: relative;
+}
+
+.image-text img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Pour que l'image remplisse le conteneur sans déformation */
+}
+
+.texte {
+  position: absolute;
+  top: 10px;
+  /* Distance du texte par rapport au haut de l'image */
+  left: 10px;
+  /* Distance du texte par rapport à la gauche de l'image */
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.first {
+  color: #000;
+}
 
 
 /* Global Responsive Adjustments */
@@ -649,6 +706,7 @@ body {
   }
 }
 
+
 @media (max-width: 480px) {
   .header {
     padding: 10px;
@@ -667,7 +725,7 @@ body {
   }
 
   .description .section-block p {
-    font-size: 0.875rem;
+    font-size: 0.9rem;
   }
 
   .collection-item p {
@@ -676,11 +734,14 @@ body {
 
   .overlay h2 {
     font-size: 20px;
+    text-align: center;
   }
 
   .overlay button {
     font-size: 14px;
-    padding: 8px 16px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
   }
 
   .service-item .icon {
@@ -703,6 +764,17 @@ body {
   .newsletter button {
     font-size: 0.875rem;
     padding: 0.6rem;
+
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-section {
+    margin-bottom: 3rem;
+    text-align: center;
   }
 
   .footer-section h3 {
